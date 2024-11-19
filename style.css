@@ -32,7 +32,7 @@ footer {
 
 .logo {  
     padding-right: 8px;
-    font-size: 1.30em;
+    font-size: 0.80em;
     color: #ff2020;
     user-select: none;
     text-decoration: none;
@@ -89,19 +89,22 @@ footer {
   }
 
 @media (max-width: 768px) {
+    .logo {
+        font-size: 2em;
+    }
     .menu-toggle {
         display: block;
         
     }
 
   .navbar_direita {
-    display: none; /* Esconde o menu em telas pequenas */
-    flex-direction: column; /* Alinha itens verticalmente */
-    width: 250px; /* Largura total */
-    position: absolute; /* Para aparecer abaixo do navbar */
-    top: 100px; /* Abaixo da navbar */
+    display: none; 
+    flex-direction: column; 
+    width: 250px; 
+    position: absolute; 
+    top: 100px; 
     right: -250px;
-    padding: 3vh 0; /* Espaçamento vertical */
+    padding: 3vh 0; 
     transition: right 0.3s ease;
     background-color: rgba(128, 128, 128, 0.9);
     border-radius: 5px;
@@ -110,7 +113,7 @@ footer {
   }
 
   .navbar_direita.active {
-    display: flex; /* Exibe o menu quando ativo */
+    display: flex; 
     right: 0;
 }
 
@@ -122,14 +125,14 @@ footer {
 }
 
 .navbar_direita li {
-    margin: 0; /* Remover margens entre os itens */
+    margin: 0; 
     padding-right: 2vh;
-    text-align: right; /* Alinhar texto à direita */
+    text-align: right; 
 }
 
 .navbar_direita a {
-    padding: 0px 0px; /* Espaçamento interno */
-    text-align: start; /* Centraliza o texto */
+    padding: 0px 0px; 
+    text-align: start; 
     display: block;
     margin-left: 0;
     padding-top: 1vh;
@@ -178,29 +181,130 @@ footer {
     overflow: hidden;
 }
 
+.fotominha {
+  border-radius: 10px 10px 0 0;
+}
+
+.card_sobremim {
+    margin: 0 auto;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(116, 116, 116);
+    width: calc(30% - 20px);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: url(img/fundocard.jpg);
+    background-size: cover;
+
+    position: relative;
+}
+
+.card_sobremim h3 {
+    margin-top: 5vh;
+    font-size: 3vw;
+}
+
+.card_sobremim p {
+    margin-top: 0;
+    padding: 2vh;
+    font-size: 2vw;
+}
+
+.card_sobremim a {
+    color: #ff2020;
+    text-decoration: none;
+    padding-bottom: 3vh;
+    font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+    .card_sobremim {
+        margin-top: 20vw;
+        width: calc(80% - 20px); 
+    }
+
+    .card_sobremim h3 {
+        margin-top: 5vh;
+        font-size: 5vw;
+    }
+    
+    .card_sobremim p {
+        margin-top: 0;
+        padding: 2vh;
+        font-size: 4vw;
+    }
+    
+    .card_sobremim a {
+        color: #ff2020;
+        text-decoration: none;
+        padding-bottom: 3vh;
+        font-size: 4vw;
+    }
+}
+
 .informacoes {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
     text-align: center;
     width: 80%;
     margin: 0 auto;
 }
 
 .cilindro {
-    margin-bottom: 30px;
-    margin: 15vw;
-    padding: 30px;
+    margin: 10px 5px;
+    padding: 10px;
     background-color: rgb(238, 238, 238);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(116, 116, 116);
+    width: calc(30% - 20px);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-image: url(img/fundocard.jpg);
+    background-size: cover;
+}
 
-    justify-content: space-between;
-    word-break: break-all;
+.cilindro:nth-child(4) {
+    left: 110px;
+}
+
+.cilindro:nth-child(5) {
+    right: 110px;
 }
 
 .cilindro p {
     width: 100%;
+    
+}
+
+.cilindro a {
+    color: #ff2020;
+    text-decoration: none;
 }
 
 .conjunto_c {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+@media (max-width: 768px) {
+    .cilindro {
+        width: calc(100% - 20px); 
+    }
+    .cilindro:nth-child(4) {
+        left: 0px;
+    }
+    
+    .cilindro:nth-child(5) {
+        right: 0px;
+    }
 }
